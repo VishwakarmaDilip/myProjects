@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* home section */
+.main {
+  height: 94vh;
+  width: 100vw;
+}
+
+/* home section > background */
+.main .home {
+  height: 100%;
+  width: 100%;
+  background-image: url(Assets/Images/herobg.jpg);
+  background-repeat: no-repeat;
+  background-size: max(1900px, 100vw);
+  background-position: center -270px;
+  display: flex;
+  justify-content: center;
+}
+.bbox {
+  height: 94vh;
+  width: 100vw;
+  background: linear-gradient(
+    to top,
+    #000000d1,
+    rgba(0, 0, 0, 0.307) 60%,
+    black 100%
+  );
+  position: absolute;
+  z-index: 1;
+}
+
+/* home section > navbar */
+.nav {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  width: 77%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* home section > navbar > logo */
+#leftbox img {
+  height: 40px;
+}
+
+/* home section > navbar > rightside */
+#rightbox {
+  height: 32px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* home section > navbar > rightside > language */
+#selector {
+  border-radius: 5px;
+  height: 100%;
+  width: 125px;
+  display: flex;
+  gap: 2px;
+  position: relative;
+  background-color: #0000005c;
+}
+select {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 0.89em;
+  font-weight: 600;
+  position: relative;
+  padding: 0px 0px 0px 35px;
+  appearance: none;
+}
+#selector img {
+  height: 18px;
+  align-self: center;
+  position: absolute;
+  z-index: 1;
+  left: 8px;
+  pointer-events: none;
+}
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  left: 90px;
+  top: 3px;
+  pointer-events: none;
+}
+select option {
+  font-size: 1.1em;
+}
+select option:nth-child(2) {
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* hame section > navbar > rightside > signin button */
+#signin {
+  height: 100%;
+  width: 80px;
+  background-color: #f80b17;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#signin a {
+  display: block;
+  font-size: 0.9em;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+#signin:hover {
+  background-color: #e50914;
+}
+#signin:active {
+  background-color: #81161c;
+}
+
+/* home section > main box */
+.home_box {
+  z-index: 1;
+  height: 80%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  color: white;
+  padding-top: 250px;
+}
+.slogan p {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 800;
+}
+.info {
+  font-size: 25px;
+}
+.user_interaction {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.instruction {
+  font-size: 20px;
+}
+
+/* home section > main box > Enter email part */
+.activity {
+  height: 55px;
+  width: 580px;
+  display: flex;
+  gap: 1%;
+  position: relative;
+}
+.activity #email_box {
+  height: 100%;
+  width: 65%;
+  border-radius: 5px;
+  background-color: #1c1616b8;
+  border-style: groove;
+  color: white;
+  padding: 10px 0 0 20px;
+  font-size: 1em;
+}
+#elabel {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  color: #cec7c7;
+  font-weight: 500;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+#email_box:focus ~ #elabel,
+#email_box:valid ~ #elabel {
+  font-size: 0.7em;
+  top: 11px;
+}
+.activity .sub_btn {
+  height: 100%;
+  width: 34%;
+  border-radius: 5px;
+  background-color: #f80b17;
+  color: white;
+  font-size: 25px;
+  border: none;
+  padding-right: 25px;
+}
+.arrow {
+  height: 12px;
+  width: 12px;
+  border-right: white solid;
+  border-bottom: white solid;
+  transform: rotate(315deg);
+  position: absolute;
+  top: 21px;
+  right: 21px;
+}
+.sub_btn:hover {
+  background-color: #e50914;
+}
+.sub_btn:active {
+  background-color: #81161c;
+}
+
+.separation {
+  height: 8px;
+  background-color: #242020;
+}
+
+/* Netflix on Divices */
+.secbag {
+  height: 78vh;
+  width: 100vw;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.text_box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.text_box div:nth-child(1) {
+  font-size: 45px;
+  font-weight: 800;
+}
+.text_box p:nth-child(2) {
+  font-size: 25px;
+}
+
+/* TV section */
+.tv {
+  padding: 0px 10px;
+}
+#tv_text {
+  padding-left: 155px;
+}
+.image_box {
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+.image_box img {
+  width: 550px;
+}
+.video {
+  width: 400px;
+  position: absolute;
+  z-index: -1;
+  top: 165px;
+  left: 73px;
+}
+
+/* Mobile section */
+.mobile_img {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.mobile_img img {
+  width: 600px;
+  align-self: flex-end;
+  position: relative;
+}
+.mbtxt {
+  padding-right: 150px;
+}
+.card {
+  height: 100px;
+  width: 330px;
+  background-color: black;
+  border: 1px solid grey;
+  border-radius: 15px;
+  position: absolute;
+  top: 370px;
+  left: 302px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.card_content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.card div img {
+  width: 55px;
+}
+.card_txt p:nth-child(1) {
+  font-weight: 600;
+  color: white;
+}
+.card_txt p:nth-child(2) {
+  font-size: 15px;
+  color: #0461ee;
+}
+
+/* desktop section */
+#desk_text {
+  padding: 0 10px 0 155px;
+}
+.deskimg_box img {
+  width: 600px;
+}
+.desk_video {
+  width: 375px;
+  position: absolute;
+  z-index: -1;
+  top: 115px;
+  left: 105px;
+}
+
+/* kids section */
+.kidimg_box {
+  padding-left:160px ;
+  align-self: center;
+}
+.kidimg_box img {
+  width: 579px;
+}
+.kid_text {
+  padding-right:145px;
+}
+
+/* FAQ section */
+.faq {
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding:75px 0;
+}
+h2 {
+  font-size: 45px;
+}
+.faq_box {
+  width: 77vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 25px;
+}
+.qna_box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.question_box {
+  background-color: #2D2D2D;
+  height: 90px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.question_box img {
+  height: 35px;
+  transition: all 0.1s ease;
+}
+.question_box:hover {
+  background-color: rgb(65, 62, 62);
+}
+.answer_box1,.answer_box2,.answer_box3,.answer_box4,.answer_box5,.answer_box6 {
+  background-color: #2D2D2D;
+  padding:25px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  display: none;
+  transition: all .5s ease;
+}
+
+/* open-close machanism */
+#check1,#check2,#check3,#check4,#check5,#check6 {
+  display: none;
+}
+
+#check1:checked~.answer_box1 {
+  display: flex;
+}
+#check1:checked~.question_box img {
+  transform: rotate(45deg);
+}
+
+#check2:checked~.answer_box2 {
+  display: flex;
+}
+#check2:checked~.question_box img {
+  transform: rotate(45deg);
+}
+
+#check3:checked~.answer_box3 {
+  display: flex;
+}
+#check3:checked~.question_box img {
+  transform: rotate(45deg);
+}
+
+#check4:checked~.answer_box4 {
+  display: flex;
+}
+#check4:checked~.question_box img {
+  transform: rotate(45deg);
+}
+
+#check5:checked~.answer_box5 {
+  display: flex;
+}
+#check5:checked~.question_box img {
+  transform: rotate(45deg);
+}
+
+#check6:checked~.question_box img {
+  transform: rotate(45deg);
+}
+#check6:checked~.answer_box6 {
+  display: flex;
+}
+
+/* footer */
+footer {
+  color: grey;
+  width: 100vw;
+}
+footer a {
+  color: grey;
+}
+.wrap {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+}
+.question {
+  align-self: flex-start;
+  margin-left: 165px;
+}
+.quick_link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quick_link ul {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px 190px;
+}
+.quick_link ul li {
+  list-style: none;
+}

@@ -1,0 +1,6 @@
+.secbag {
+    grid-template-columns: 1fr;
+}
+#tv_text {
+    padding-left: 135px;
+}
